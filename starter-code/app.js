@@ -211,18 +211,22 @@ Student.prototype.scope = function() {
   console.log(this);
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+// Done: Uncomment the following line of code to see the output in the browser console
+console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
+// Done: Uncomment the following line of code to see the output in the browser console
+console.log(joe.scopeArrow());
 
-// TODO: Write a COMMENT below to answer the following questions.
+// Done: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// "this" is undefined.  Line 211 already logs the function.
+
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// "this" is undefined.  Line 217 already logs the arrow.
+
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// "this" is different when an arrow function is used because the scope involved.  The
+// scope for the arrow function assumes that it is the entire window.  The scope for
+// the constructor function is limited to just that function.
